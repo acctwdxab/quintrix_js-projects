@@ -1,0 +1,114 @@
+//array push
+function applyPush(array, element) {
+  // add the element to the back of the array
+  // return the array
+ 
+  array.push(element)
+  return array
+}
+var resultArray1 = applyPush([1, 17, 29], 34);
+console.log('should log [1, 17, 29, 34]:', resultArray1);
+
+var resultArray2 = applyPush(['abc', 'def'], 'ghi');
+console.log('should log ["abc", "def", "ghi"]:', resultArray2);
+
+
+
+//array slice
+
+function removeFromBackOfNew(arr) {
+  // your code here
+  var output =arr.slice(0,arr.length-1)
+  return output
+}
+var arr = [1, 2, 3];
+var output = removeFromBackOfNew(arr);
+console.log(output); // --> [1, 2]
+console.log(arr); // --> [1, 2, 3]
+
+//array pop
+
+function applyPop(array) {
+  // create a popped variable
+  // assign it to an expression removing the last element from the array
+  // return the popped variable
+  var pop = array.pop();
+  return pop
+  
+}
+var resultElement1 = applyPop([1, 171, 129]);
+console.log('should log 129:', resultElement1);
+
+var resultElement2 = applyPop(['islands', 'peninsulas', 'pacific']);
+console.log('should log pacific:', resultElement2);
+
+
+//array unshift
+
+function applyUnshift(array, element) {
+  // add the element to the front of the array
+  // return the array
+  array.unshift(element);
+  return array
+}
+var resultArray1 = applyUnshift([7, 9, 4], 1);
+console.log('should log [1, 7, 9, 4]:', resultArray1);
+
+var resultArray2 = applyUnshift(['ef', 'hi'], 'bc');
+console.log('should log ["bc", "ef", "hi"]:', resultArray2);
+
+
+//array shift
+
+function applyShift(array) {
+  // create a shifted variable
+  // assign it to an expression removing the first element from the array
+  // return the shifted variable
+  shi = array.shift()
+  return shi
+}
+
+var resultElement1 = applyShift([1, 171, 129]);
+console.log('should log 1:', resultElement1);
+
+var resultElement2 = applyShift(['islands', 'peninsulas', 'pacific']);
+console.log('should log islands:', resultElement2);
+
+
+//array splice
+
+function addAnElementInGeneral(array, index, element) {
+  // add the element to the array at the index given
+  // (be sure not to replace any existing elements)
+  // return the array
+  array.splice(index,0,element)
+  return array
+}
+var resultArray1 = addAnElementInGeneral([7, 9, 10], 1, 8);
+console.log('should log [7, 8 , 9, 10]:', resultArray1);
+
+var resultArray2 = addAnElementInGeneral(['q', 'r', 't'], 2, 's');
+console.log('should log ["q", "r", "s", "t"]:', resultArray2);
+
+//array filter method
+
+var persons = {
+  a: 8,
+  b: 19,
+  c: 10
+}
+
+removePersonUnder18(18, obj);
+console.log(obj); // --> { b: 19 }
+
+function removePersonUnder18(num, obj) {
+
+  for(var object in obj){
+      if(obj[object]<num){
+         delete obj[object]
+      }
+      
+  }return obj
+  
+}
+
