@@ -112,3 +112,12 @@ function removePersonUnder18(num, obj) {
   
 }
 
+// using filter and foreach to filter out persons array
+
+let array=[ { "_id": "597c79908b3baf49d88204db", "age": 17, "name": "Mack Roach", "gender": "male", "active": false }, { "_id": "597c799049f0cf0a330d58dd", "age": 22, "name": "Guy Howe", "gender": "male", "active": true }, { "_id": "597c79908e284bdc450a4241", "age": 32, "name": "Marie Camacho", "gender": "female", "active": true }];
+let filtered_array=array.filter(a=>a.age >=18 &&  a.age<=30 && a.gender==='male');
+
+filtered_array.forEach(function (element) {
+    console.log(element);
+       
+    });
